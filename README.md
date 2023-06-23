@@ -9,11 +9,11 @@ SpringBoot and Thymeleaf
 
 ### Branch web:
 - Home Page - DTO Data
-![Home Page](S5_01_N1_WebCRUD/S05T01N01DebonMiquel/src/main/resources/static/images/readme/Members.png)
+![Home Page](S05T01N01DebonMiquel/src/main/resources/static/images/readme/Members.png)
 
 
 - Add Branch with Entity Validation
-![Home Page](S5_01_N1_WebCRUD/S05T01N01DebonMiquel/src/main/resources/static/images/readme/add.png)
+![Home Page](S05T01N01DebonMiquel/src/main/resources/static/images/readme/add.png)
 
 
 - Errors:
@@ -24,10 +24,10 @@ SpringBoot and Thymeleaf
  </tr>
  <tr>
     <td> 
-    <img src="S5_01_N1_WebCRUD/S05T01N01DebonMiquel/src/main/resources/static/images/readme/404.png" alt="Italian 404">
+    <img src="S05T01N01DebonMiquel/src/main/resources/static/images/readme/404.png" alt="Italian 404">
     </td>
     <td>
-    <img src="S5_01_N1_WebCRUD/S05T01N01DebonMiquel/src/main/resources/static/images/readme/500.png" alt="Italian 500">
+    <img src="S05T01N01DebonMiquel/src/main/resources/static/images/readme/500.png" alt="Italian 500">
     </td>
  </tr>
 </table>
