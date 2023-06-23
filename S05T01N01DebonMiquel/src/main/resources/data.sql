@@ -1,0 +1,1 @@
+INSERT INTO sucursal("nomSucursal", "paisSucursal") VALUES("hola1", "pais1");

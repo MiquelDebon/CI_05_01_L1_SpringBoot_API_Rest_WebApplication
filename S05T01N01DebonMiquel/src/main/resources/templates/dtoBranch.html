@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:insert="~{/template/plantilla :: head}"></head>
+
+<body>
+
+<!--Top Navigation Bar  -->
+<section th:insert="~{template/plantilla :: header}"></section>
+
+
+<!--Title -->
+<div class="container-fluid">
+    <br>
+    <h3 th:text = "${title}"></h3>
+    <br>
+</div>
+
+<!--Body-->
+<section id="table-content">
+    <div class="container-fluid list">
+        <table class = "table table-dark">
+            <thead>
+            <tr>
+                <th scope = "col">Name</th>
+                <th scope = "col">Country</th>
+                <th scope = "col">European</th>
+                <th scope = "col">Edit</th>
+                <th scope = "col">Delete</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="DTO: ${sucursalDTO}">
+                <td th:text = "${DTO.name}"></td>
+                <td th:text = "${DTO.country}"></td>
+                <td th:text = "${DTO.tipusSucursal}"></td>
+                <td>
+                    <a class="btn btn-success btn-sm" th:href="@{/sucursal/update/{id}(id=${DTO.id})}"
+                       th:text="'Edit'">
+
+                    </a>
+                </td>
+                <td>
+                    <a class="btn btn-danger btn-sm" th:href="@{/sucursal/delete/{id}(id=${DTO.id})}"
+                        th:text="'Delete'"
+                        onclick="return confirm('Are you sure deleting this item?')">
+                    </a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <br>
+        <div class="container">
+            <a class="btn btn-danger " th:href="@{/sucursal/getAll}"
+               th:text="'All Branches'"></a>
+            <a class="btn btn-danger " th:href="@{/sucursal/getAllEU}"
+               th:text="'UE Branches'" ></a>
+            <a class="btn btn-danger " th:href="@{/sucursal/getAllNoEU}"
+               th:text="'Foreign UE Branches'" ></a>
+        </div>
+
+
+    </div>
+</section>
+
+
+<!--Bellow Bar -->
+<div class="">
+    <section th:insert="~{template/plantilla :: find-your-branch}"></section>
+    <footer id="footer" th:insert="~{template/plantilla :: footer}"> </footer >
+</div>
+
+</body>
+</html>
